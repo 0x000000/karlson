@@ -22,7 +22,7 @@ module Karlson
       not_implemented:             'is not implemented yet',
     }
 
-    def self.validate(variable, options, type_info)
+    def self.validate(variable, options, type_info) #todo: change signature to variable, details, options
       variable_name = options[:as]
       validators    = options[:for]
 

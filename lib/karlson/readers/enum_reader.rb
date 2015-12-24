@@ -44,7 +44,3 @@ module Karlson
     end
   end
 end
-
-def enum(name=nil, &block)
-  Karlson::Readers::TypesRegistry.register Karlson::Readers::EnumReader.new(name, &block)
-end

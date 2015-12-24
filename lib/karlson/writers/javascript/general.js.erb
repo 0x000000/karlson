@@ -1,0 +1,45 @@
+(function(undefined) {
+  "use strict";
+
+  function isString(obj)     { return Object.prototype.toString.call(obj) === '[object String]'; }
+  function isBoolean(obj)    { return Object.prototype.toString.call(obj) === '[object Boolean]'; }
+  function isNumber(obj)     { return Object.prototype.toString.call(obj) === '[object Number]'; }
+  function isObject(obj)     { return Object.prototype.toString.call(obj) === '[object Object]'; }
+  function isArray(obj)      { return Object.prototype.toString.call(obj) === '[object Array]'; }
+  function isNull(obj)       { return obj === null || obj === undefined; }
+
+//  function isNotInEnum(obj, enumClass) { return !(enumClass.__metadata__[obj]); }
+//
+//  function isShouldBe(value, meta) {
+//    return meta['required'] ? isNull(value) : false;
+//  }
+//
+//  function isDefaultValue(value, meta) {
+//    var isRequired = meta['required'], isDefault = (value === meta['default']);
+//    return isRequired ? false : isDefault;
+//  }
+//
+//  function isObjectOfType(value, type) {
+//    return value.constructor === type;
+//  }
+
+
+  function validate() {
+    return {success: true, errors: []};
+  }
+
+  var global = (1,eval)('this');
+  global.Karlson = {
+    pack:     function() {
+
+    },
+    unpack:   function() {
+
+    },
+  };
+})();
+
+
+//var x = new Model({foo: 'bar'});
+//x.validate();
+//x.errors();

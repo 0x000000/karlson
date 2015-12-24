@@ -63,7 +63,3 @@ module Karlson
     end
   end
 end
-
-def pack(name=nil, &block)
-  Karlson::Readers::TypesRegistry.register Karlson::Readers::PackReader.new(name, &block)
-end

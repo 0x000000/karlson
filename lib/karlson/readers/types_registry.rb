@@ -23,7 +23,7 @@ module Karlson
           when :pack
             @packs[type_name] = builder
           else
-            raise ArgumentError, "Unknown type: #{type_info[:type]}"
+            raise ArgumentError, "Unknown type: #{type_info[:type]}" #todo: move to validation
           end
         end
 
