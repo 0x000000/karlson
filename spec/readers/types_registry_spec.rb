@@ -51,7 +51,7 @@ module Karlson::Readers
       it { expect(TypesRegistry.pack(:little_green_man).type_info).to eq({type: :pack, name: :little_green_man, fields_types: [], fields_names: [], fields_positions: [], fields_options: [], fields: {}}) }
     end
 
-    describe '::compute_all' do
+    describe '.compute_all' do
       context 'when TypesRegistry does not contain any builders' do
         it { expect { TypesRegistry.compute_all }.to_not raise_error }
       end

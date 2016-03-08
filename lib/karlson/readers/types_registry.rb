@@ -9,6 +9,8 @@ module Karlson
       @internal_types_mapping = {}.merge(RUBY_TO_INTERNAL_TYPES)
 
       class << self
+        attr_reader :user_types, :internal_types_mapping
+
         def register(builder)
           type_info = builder.type_info
 
@@ -25,14 +27,6 @@ module Karlson
           else
             raise ArgumentError, "Unknown type: #{type_info[:type]}" #todo: move to validation
           end
-        end
-
-        def internal_types_mapping
-          @internal_types_mapping
-        end
-
-        def user_types
-          @user_types
         end
 
         def all_types

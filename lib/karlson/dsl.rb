@@ -9,7 +9,7 @@ module Karlson
     end
 
     def compile_to(language = nil, options = {})
-      Karlson::Writers::WriterRegistry.request_compilation(language, options)
+      Karlson::Writers::LangsRegistry.request_compilation(language, options)
     end
   end
 end
