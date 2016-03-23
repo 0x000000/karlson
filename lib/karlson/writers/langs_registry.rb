@@ -1,6 +1,8 @@
 module Karlson
   module Writers
     module LangsRegistry
+      DEFAULT_OPTIONS = {working_dir: nil}
+
       @requested_langs, @available_langs, @template_langs = {}, {}, {}
 
       class << self
@@ -43,7 +45,7 @@ module Karlson
 
         def write_all
           requested_langs.each do |language, options|
-            writer = available_langs[language].new options.merge(path: './tmp/test')
+            writer = available_langs[language].new DEFAULT_OPTIONS.dup.merge(options)
             writer.write!
           end
         end

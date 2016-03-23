@@ -1,4 +1,5 @@
 require 'erb'
+require 'fileutils'
 
 require 'karlson/version'
 
