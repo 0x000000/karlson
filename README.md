@@ -1,4 +1,4 @@
-[[https://github.com/0x000000/karlson/blob/master/docs/karlson.jpg]]
+![](https://github.com/0x000000/karlson/blob/master/docs/karlson.jpg)
 
 This code is written for educational reasons as a part of research I have done around 2012-2013.
 It was inspired by CORBA, SOAP and early implementations of Google's Protobuf (before 3rd version).
@@ -12,7 +12,7 @@ UI/UX is not a part of this conversation also.
 
 Let's talk about bank accounts. Here is a simple UI mock:
 
-[[https://github.com/0x000000/karlson/blob/master/docs/account_card.png]]
+![](https://github.com/0x000000/karlson/blob/master/docs/account_card.png)
 
 
 What we can do here:
@@ -34,7 +34,7 @@ Remove funds: `POST /account/transaction/create` with `amount=<requred ammount>`
 
 Everything looks good, but what if we add new requirements:
 
-[[https://github.com/0x000000/karlson/blob/master/docs/many_users_many_accs.png]]
+![](https://github.com/0x000000/karlson/blob/master/docs/many_users_many_accs.png)
 
 
 Now our UI should be able to support multiple users
@@ -51,7 +51,7 @@ Here is a new look of our schema:
 
 Let's say we want to allow our admins to transfer money between different accounts among different users:
 
-[[https://github.com/0x000000/karlson/blob/master/docs/transfer_funds.png]]
+![](https://github.com/0x000000/karlson/blob/master/docs/transfer_funds.png)
 
 It will require different scheme like `POST accounts/transfer/create`
 So we ended with two paths for accounts: `/accounts` and `user/:user_id/accounts`.
@@ -329,7 +329,7 @@ object UserDetails {
 
 ```
 
-Conclusion:
+## Conclusion:
 
 **1**. It's possible to explicitly declare app domain objects. Everyone will benefit from that fact: internal team can reuse
 types, enums and objects (as well as validations/restrictions), external clients can use predefined architecture
